@@ -9,10 +9,10 @@ The objective of this lab is to explore setting up your serial communication sys
 #### LCD Driver and Display
 You will be using the LCD 1602 series (16 x 2) in 4-bit data transmission mode. BE WARNED, THE LCD TIMING INITIALIZAITON SEQUENCE IS A BIT “FINICKY”. We’ll go through the details here to make your life a bit easier. First, the LCD is connected to PORTB (pins 0&1) for enable and reset. Second, we use the upper nibble of PORTA for our data lines (as illustrated in Figure 1). Once connected, you should get something that looks like Figure 2 (note this is just for the LCD, you’ll wire the serial communication later).
 
-![Figure 1Pinout illustration on the ATMega2560 device.](/assets/images/Figure1.png)
+![Figure 1Pinout illustration on the ATMega2560 device.](/lab05/assets/images/Figure1.png)
 Figure 1Pinout illustration on the ATMega2560 device.
 
-![Figure 2 Wiring illustration with your LCD and your development board](/assets/images/Figure2.png)
+![Figure 2 Wiring illustration with your LCD and your development board](/lab05/assets/images/Figure2.png)
 Figure 2 Wiring illustration with your LCD and your development board
 
 
