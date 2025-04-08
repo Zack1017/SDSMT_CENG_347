@@ -13,11 +13,11 @@ The first part of the lab will begin by interfacing the 8x8 LED matrix display (
     • CS: Chip select (data loaded when low, latched on rising)
     • CLK: Clock address/data
 
-![Figure 1](/assets/images/Figure1.png)
+![Figure 1](/Lab04/assets/images/Figure1.png)
 
 To drive the LED matrix, we use an integrated MAX 7219 device (functional block diagram illustrated below). The 7219 uses a 16-bit serial shift register where the first 8-bits define the command, and the second 8-bits define the data. You’ll want to write two “helper” functions to make your life easier. The first (call it WriteByte(unsigned char DATA)) is simply to fill the 16-bit data register with the address and data (8-bits at a time, piped similar to serial, the second simply sets the CS bit low, makes a call to the first function once for the address and a second time for the data, the sets the CS bit high to latch the data. For simplicity, we call this function WriteData(unsigned char addr, unsigned char data). The addr is simply the value 1-8 which corresponds to the row of the LED matrix (address: top to bottom) while the data is an 8-bit value where 0-clears the LED in that row and 1-sets the LED in that row.
 
-![Figure 2](/assets/images/Figure2.png)
+![Figure 2](/Lab04/assets/images/Figure2.png)
 
 
 Pseudo-code for WriteByte(unsigned char DATA): 
