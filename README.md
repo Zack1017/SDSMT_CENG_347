@@ -18,3 +18,6 @@ Serial Communication
 
 ## [Lab 05](https://github.com/Zack1017/SDSMT_CENG_347/tree/main/Lab05)
 Serial Code and LCD Display
+
+## Lab 6 [Comming Soon]
+External Interrupts
