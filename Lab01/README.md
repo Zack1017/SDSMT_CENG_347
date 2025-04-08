@@ -25,12 +25,12 @@ blinks
 ### Note:
 The LED on board is wired to PORTB Pin7 (PB7) as seen from the pinout below. Note that all pins on the AVR devices are multipurpose. You’ll notice a LOT of things going on in the figure with respect to PB7. It’s also listed as: 26, PB7, PCINT7, 0C1C, -13-, OC0A, and the orange symbol indicates the LED connection. We will configure this pin as a standard output to drive the LED, but we’ll get to what the other functions are in the duration of the course. For now, all CENG 347L Arduino IDE and GPIO we care about is the -13- means PWM pin 13 that is actually printed on the board, and PB7 implies PORTB Bit 7.
 
-![Figure 1](/assets/images/Figure1.png)
+![Figure 1](/Lab01/assets/images/Figure1.png)
 
 ### Part 2:
 Now that you can successfully write code and get it onto your microcontroller board, you will extend the above code to create a 4-bit binary counter (i.e., count from 0-15 in binary) using PORTB. To illustrate you can count in binary, you will connect 4 of your LEDs to the high nybble (i.e., PB4, PB5, PB6, PB7). Because microcontrollers aren’t meant to drive LEDs directly (even though they source enough current, it’s common practice to simply use them as logic gates not drivers), we will connect the anodes to a common source +5V and connect the cathodes to each of the PORTB pins as indicated above. Be sure to current limit by connecting a resistor in series with the LED and the supply. Note: by driving the LEDs in this manner you will be creating inverse logic, i.e., a 0 written to PB4 will turn the LED on whereas a 1 written to B4 will turn the LED off (you can address this in your source code to get a proper counter). An example schematic for a single LED connected to PB4 is illustrated below:
 
-![Figure 2](/assets/images/Figure2.png)
+![Figure 2](/Lab01/assets/images/Figure2.png)
 
 ### Part 3
 Now that we can successfully run code on our boards and understand some basic I/O functionality, let’s do some debugging. As before, download and follow the debugging tutorial provided under the resources tab on D2L. Go ahead and start the debugger by setting some break points before you write to PORTB (assuming you are using Part 2 of this lab for your source code). Now single step through the code and answer the following questions.
